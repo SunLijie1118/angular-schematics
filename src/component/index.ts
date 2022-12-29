@@ -40,10 +40,11 @@ function getParsePath(tree: Tree, options: any): any {
         throw new SchematicsException('不在angular cli工作区,请在angular项目中执行!')
     }
 
+    const packageData =JSON.parse(tree.read('package.json')!.toString('utf-8'));
     // 读取并整理angular配置
     const workspaceConfig = JSON.parse(workspaceConfigBuffer.toString());
     // 有传入project属性或者是默认project
-    const projectName = options.project || workspaceConfig.defaultProject;
+    const projectName = options.project || workspaceConfig.defaultProject || packageData.name;
     // 获取project定义
     const project = workspaceConfig.projects[projectName];
     // 获取默认project路径
