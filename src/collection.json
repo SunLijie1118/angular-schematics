@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component": {
+      "description": "创建一个通用angular component模板文件",
+      "factory": "./component/index#genComponent",
+      "schema": "./component/schema.json"
+    }
+  }
+}
