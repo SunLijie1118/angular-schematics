@@ -1,28 +1,26 @@
-# Getting Started With Schematics
+# angular schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+本例中用angular schematics实现了ng generator使用模板生成组件、ng add指令安装模块、ng update更新模块修改指定组件内容
 
-### Testing
-
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
+## 修改并使用
 
 ```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
+npm run install
 npm run build
-npm publish
+npm link
 ```
-
-That's it!
+### 实现ng generator使用模板生成组件
+使用示例
+```bash
+ng g angular-schematics:component 
+```
+### 实现ng add指令安装模块
+使用示例
+```bash
+ng g angular-schematics:ng-add 
+```
+### 实现ng update更新模块修改指定组件内容
+使用示例
+```bash
+ng update
+```
