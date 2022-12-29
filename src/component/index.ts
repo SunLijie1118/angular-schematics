@@ -42,7 +42,6 @@ function getParsePath(tree: Tree, options: any): any {
 
     // 读取并整理angular配置
     const workspaceConfig = JSON.parse(workspaceConfigBuffer.toString());
-    console.log(123, workspaceConfig);
     // 有传入project属性或者是默认project
     const projectName = options.project || workspaceConfig.defaultProject;
     // 获取project定义
